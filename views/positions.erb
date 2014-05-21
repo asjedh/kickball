@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title><%= @position %></title>
-    <link rel="stylesheet" href="../public/home.css" type="text/css">
-  </head>
-
-  <body>
-  <h3><%= "All Players That Play #{@position_cap}" %></h3>
+  <h3><%= "All Players That Play #{@position}" %></h3>
 
     <ul>
       <% @players.each do |player| %>
-        <% if player[:position].downcase == @position %>
           <li> <%= "#{player[:team]}: #{player[:first_name]} #{player[:last_name]}" %> </li>
-        <% end %>
       <% end %>
 
     </ul>
-  </body>
-</html>
